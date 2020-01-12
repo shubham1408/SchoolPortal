@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>Classrom Portal Dashboard</title>
+
+    <!-- Base Css Files -->
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/bootstrap.be665bb9f0f7.css" rel="stylesheet"/>
+
+    <!-- Font Icons -->
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/font-awesome.5343ee1a287a.css" rel="stylesheet"/>
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/lms/assets/ionicon/css/ionicons.min.f548be81e665.css" rel="stylesheet"/>
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/lms/css/material-design-iconic-font.min.ec9ff5458c2e.css" rel="stylesheet">
+
+    <!-- animate css -->
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/dashboard/animate.1da8ecf18cc0.css" rel="stylesheet"/>
+
+    <!-- Waves-effect -->
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/dashboard/waves-effect.5432d1ba5337.css" rel="stylesheet">
+    
+    <!-- Custom Files -->
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/dashboard/helper.4986d2dbb465.css" rel="stylesheet" type="text/css"/>
+    <link href="https://d1wvhegsi0wquf.cloudfront.net/static/css/dashboard/style.37350e06a397.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css"/>
+    <style>
+        a.btn {
+            margin: 2px;
+        }
+        #widget_modal{background: rgba(0, 0, 0, 0.21176470588235294)}
+        #widget_modal .modal-dialog{width: 71.2%!important;}
+        #widget_modal .modal-content{overflow: hidden}
+
+        div.pagelook {
+            margin-left: 0px;
+        }
+        div.containerout {
+            background-color: #ff0000;
+        }
+        div.topbarleftcolor {
+            background: #6e8037 !important;
+        }
+        table.customcolor {
+            border-color: #000000 !important;
+        }
+        thead.customcolor {
+            border-color: #000000 !important;
+        }
+        h3.customtext{
+            padding: 30px !important;
+            text-align: center;
+            font-style: italic;
+            background-color: #8ffbd8;
+        }
+    </style>
+</head>
+
+<body class="fixed-left">
+
+<!-- Begin page -->
+<div id="wrapper">
+
+    
+        <!-- Top Bar Start -->
+            <div class="topbar">
+                <!-- LOGO -->
+                <div class="topbar-left topbarleftcolor">
+                    <div class="text-center">
+                        <a href="#" class="logo"><span>Classroom</span></a>
+                    </div>
+                </div>
+                <!-- Button mobile view to collapse sidebar menu -->
+                <div class="navbar navbar-default" role="navigation">
+                    <div class="container containerout">
+                        <div class="">
+                            <div class="pull-left">
+                                <button class="button-menu-mobile open-left">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <span class="clearfix"></span>
+                            </div>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+            <!-- Top Bar End -->
+
+
+    <div class="content-page pagelook">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container">
+
+
+                <div class="row" style="margin-top: 20px;">
+                    <div class="col-lg-12">
+                        <div class="panel">
+                                    <h3 class="panel-title customtext" style="font-size: 18px; padding: 10px;">
+                                        Tabular Preview of Classroom
+                                    </h3>
+
+            <table id="institutes_list" class="table table-small-font customcolor table-bordered table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Teacher ID</th>
+                        <th data-priority="1">No .of Students</th>
+                        <th data-priority="1">Teachers Earning more than one Lac</th>
+                        <th data-priority="1">Salaries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if tabular_content %}
+                    {% for tab_content in tabular_content %}
+                        <tr>
+                            <td>
+                                <a href="">
+                                    tab_content['id']
+                                </a>
+                            </td>
+                            <td>tab_content['classroom_name']</td>
+                            <td>
+                                <a href="">
+                                    tab_content['classroom_subject']
+                                </a>
+                            </td>
+                            <td>tab_content['classroom_subject_teacher']</td>
+                        </tr>
+                    {% endfor %}
+                    {% endif %}
+                
+                    <tr>
+                        <td>
+                            <a href="/jcms/edit-new-placement/6219/">
+                                6219
+                            </a>
+                        </td>
+                        <td>None</td>
+                        <td>
+                            <a href="/jcms/edit-new-placement/6219/">
+                                100.0
+                            </a>
+                        </td>
+                        <td>None</td>
+
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <a href="/jcms/edit-new-placement/7520/">
+                                7520
+                            </a>
+                        </td>
+                        <td>2010</td>
+                        <td>
+                            <a href="/jcms/edit-new-placement/7520/">
+                                None
+                            </a>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <a href="/jcms/edit-new-placement/8223/">
+                                8223
+                            </a>
+                        </td>
+                        <td>2015</td>
+                        <td>
+                            <a href="/jcms/edit-new-placement/8223/">
+                                None
+                            </a>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                
+                    <tr>
+                        <td>
+                            <a href="/jcms/edit-new-placement/8225/">
+                                8225
+                            </a>
+                        </td>
+                        <td>None</td>
+                        <td>
+                            <a href="/jcms/edit-new-placement/8225/">
+                                None
+                            </a>
+                        </td>
+                        <td>None</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="widget_modal" class="modal modal-lg fade" role="dialog" style="width: 100%">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Widget</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="ajax_box"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery  -->
+<script src="https://d1wvhegsi0wquf.cloudfront.net/static/js/jquery.min.5defbdc2ca51.js"></script>
+<script src="https://d1wvhegsi0wquf.cloudfront.net/static/js/bootstrap.min.d24d50bd0731.js"></script>
+<script src="https://d1wvhegsi0wquf.cloudfront.net/static/lms/js/waves.a2999d4a6b62.js"></script>
+<script src="https://d1wvhegsi0wquf.cloudfront.net/static/js/wow.min.1d974e359325.js"></script>
+
+
+<!-- CUSTOM JS -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.formset/1.2.2/jquery.formset.js"></script>
+
+<script type="text/javascript">
+    
+</script>
+    
+</body>
+</html>
